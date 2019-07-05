@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tfzr.appform.MainFormController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="miNewLayout" mnemonicParsing="false" onAction="#miNewLayoutOnAction" text="New layout" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="miOpen" mnemonicParsing="false" onAction="#miOpenOnAction" text="Open" />
+                  <Menu fx:id="mOpenRecent" mnemonicParsing="false" onAction="#mOpenRecentOnAction" text="Open recent ..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="miSave" mnemonicParsing="false" onAction="#miSaveOnAction" text="Save" />
+                  <MenuItem fx:id="miSaveAs" mnemonicParsing="false" onAction="#miSaveAsOnAction" text="Save as ..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="miClose" mnemonicParsing="false" onAction="#miCloseOnAction" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Generate">
+              <items>
+                <MenuItem fx:id="miGenerate" mnemonicParsing="false" onAction="#miGenerateOnAction" text="Generate .md file" />
+                  <MenuItem fx:id="miRandGenerate" mnemonicParsing="false" onAction="#miRandGenerateOnAction" text="Randomly generate md. file" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="miAbout" mnemonicParsing="false" onAction="#miAboutOnAction" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ScrollPane fx:id="spRoot" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
